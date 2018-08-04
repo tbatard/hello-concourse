@@ -1,5 +1,5 @@
 resources:
-- name: changes
+- name: {{git-branch}}
   type: git
   source:
     uri: {{git-repo}}
@@ -16,7 +16,7 @@ jobs:
   serial: true
   plan:
   - get: repo
-    resource: changes
+    resource: {{git-branch}}
     trigger: true
   - task: build
     file: repo/ci/tasks/build.yml
