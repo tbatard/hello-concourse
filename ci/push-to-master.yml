@@ -1,0 +1,25 @@
+resources:
+- name: changes
+  type: git
+  source:
+    uri: {{git-repo}}
+    branch: {{git-branch}}
+    private_key: {{git-private-key}}
+- name: master
+  type: git
+  source:
+    uri: {{git-repo}}
+    branch: master
+    private_key: {{git-private-key}}
+jobs:
+- name: push-to-master
+  serial: true
+  plan:
+  - get: repo
+    resource: changes
+    trigger: true
+  - task: build
+    file: repo/ci/tasks/build.yml
+  - put: master
+    params:
+      repository: repo
