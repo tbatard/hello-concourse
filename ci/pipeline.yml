@@ -13,16 +13,4 @@ jobs:
   - get: master
     trigger: true
   - task: build
-    config:
-      platform: linux
-      image_resource:
-        type: docker-image
-        source:
-          repository: openjdk
-          tag: 8
-      inputs:
-      - name: master
-      run:
-        dir: master
-        path: ./gradlew
-        args: ['build']
+    file: master/ci/tasks/build.yml
