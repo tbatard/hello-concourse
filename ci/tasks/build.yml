@@ -9,4 +9,4 @@ inputs:
 run:
   dir: master
   path: ./gradlew
-  args: ['build']
+  args: ['build', '-i']
