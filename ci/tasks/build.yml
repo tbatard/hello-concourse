@@ -8,5 +8,8 @@ inputs:
 - name: repo
 run:
   dir: repo
-  path: ./gradlew
-  args: ['build', '-i']
+  path: sh
+  args:
+  - -exc
+  - |
+    ./gradlew build -i
