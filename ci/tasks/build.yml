@@ -5,8 +5,8 @@ image_resource:
     repository: openjdk
     tag: 8
 inputs:
-- name: master
+- name: repo
 run:
-  dir: master
+  dir: repo
   path: ./gradlew
   args: ['build', '-i']

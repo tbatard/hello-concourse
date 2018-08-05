@@ -10,7 +10,8 @@ jobs:
 - name: build
   serial: true
   plan:
-  - get: master
+  - get: repo
+    resource: master
     trigger: true
   - task: build
-    file: master/ci/tasks/build.yml
+    file: repo/ci/tasks/build.yml
