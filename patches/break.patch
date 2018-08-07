@@ -1,0 +1,13 @@
+diff --git a/src/test/java/com/example/helloconcourse/WelcomeControllerTest.java b/src/test/java/com/example/helloconcourse/WelcomeControllerTest.java
+index 5aeb24c..a08e889 100644
+--- a/src/test/java/com/example/helloconcourse/WelcomeControllerTest.java
++++ b/src/test/java/com/example/helloconcourse/WelcomeControllerTest.java
+@@ -31,7 +31,7 @@ public class WelcomeControllerTest {
+                 .getResponse()
+                 .getContentAsString();
+ 
+-        assertThat(content).isEqualTo("Hello Tests");
++        assertThat(content).isEqualTo("Broken");
+     }
+ 
+ }
