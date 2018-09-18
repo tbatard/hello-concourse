@@ -1,0 +1,11 @@
+applications:
+- name: hello-concourse
+  path: build/libs/hello-concourse-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  disk_quota: 1G
+  env:
+    JAVA_OPTS: -Xss349k
+    MESSAGE_WELCOME: Hello from manifest !!!
+  instances: 1
+  memory: 512M
+  stack: cflinuxfs2
