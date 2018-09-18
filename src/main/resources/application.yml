@@ -1,2 +1,2 @@
 message:
-  welcome: "Hello Spring!!!"
+  welcome: ${MESSAGE_WELCOME:Hello Default!!!}
