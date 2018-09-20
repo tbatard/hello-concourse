@@ -10,6 +10,7 @@ jobs:
   serial: true
   plan:
   - get: master
+    trigger: true
   - task: build
     config:
       inputs:
