@@ -31,7 +31,7 @@ public class WelcomeControllerTest {
                 .getResponse()
                 .getContentAsString();
 
-        assertThat(content).isEqualTo("Hello Tests");
+        assertThat(content).isEqualTo("Hello From Tests");
     }
 
 }
