@@ -1,0 +1,28 @@
+resources:
+- name: master
+  type: git
+  source:
+    uri: https://github.com/tbatard/hello-concourse.git
+    branch: master
+
+jobs:
+- name: build
+  serial: true
+  plan:
+  - get: master
+  - task: build
+    config:
+      inputs:
+      - name: master
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: openjdk
+          tag: 8
+      run:
+        dir: master
+        path: sh
+        args:
+        - -exc
+        - ./gradlew build
