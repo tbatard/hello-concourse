@@ -5,7 +5,6 @@ applications:
   disk_quota: 1G
   env:
     JAVA_OPTS: -Xss349k
-    MESSAGE_WELCOME: Hello from manifest !!!
   instances: 1
   memory: 512M
   stack: cflinuxfs2

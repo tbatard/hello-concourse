@@ -44,3 +44,5 @@ jobs:
     params:
       manifest: master/manifest.yml
       path: build-artifact/hello-concourse-0.0.1-SNAPSHOT.jar
+      environment_variables:
+        MESSAGE_WELCOME: {{message-welcome}}
