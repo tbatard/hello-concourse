@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @TestPropertySource(properties = {
-        "message.welcome=Hello Tests",
+        "message.welcome=Hello From Tests",
 })
 public class WelcomeControllerTest {
 
